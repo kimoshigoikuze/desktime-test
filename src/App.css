@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+
+.app {
+    color: var(--text-primary);
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+    transition: all .5s;
+    display: grid;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    color: var(--text-primary);
+    background-color: var(--background);
+    border: 2px var(--text-primary) solid;
+    transition: all .5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--header);
+    box-shadow: var(--shadow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header > div {
+    min-width: 250px;
 }
 
-.App-link {
-  color: #61dafb;
+.header .name {
+    padding: 0 25px;
+    min-width: 400px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.query {
+    border-radius: 4px;
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 105%;
+    font-weight: normal;
+    border: 1px solid var(--border);
+    padding: 15px 15px 15px 45px;
+}
+
+.peace::before {
+    content: '\262F';
+    color: gray;
+    height: 40px;
+    position: relative;
+    width: 50%;
+    text-align: left;
+    left: 23.8%;
+    top: 37px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--border);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--border)
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--border);
+}
+
+/*
+
+ <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                    <option value="18">18</option>
+                    <option value="24">24</option>
+
+                    */
+.user-list {
+    margin-top: 15px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    text-align: center
+}
+
+.user-list.grid-6 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.user-list.grid-12 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.user-list.grid-15 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.user-list.grid-18 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.user-list.grid-24 {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.user-list.grid-24 .user-card span {
+    font-size: 75%;
+}
+
+.user-card {
+    border-radius: 4px;
+    display: flex;
+    text-transform: uppercase;
+    background: var(--card);
+    margin: 15px;
+    padding: 15px;
+    border-bottom: 4px solid var(--card-footer);
+    cursor: pointer;
+    font-weight: normal;
+    box-shadow: var(--shadow);
+}
+
+.user-card:hover {
+    border-color: var(--toxic-green);
+}
+
+.user-card:hover img {
+    background: var(--toxic-green);
+}
+
+.user-card span {
+    align-self: center;
+}
+
+.user-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.container {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.error {
+    text-align: center;
+    margin-top: 25px;
+    color: red;
+    font-weight: bolder;
+}
+
+select {
+    height: 36px;
+    width: 50px;
+    padding: 0 5px 0 5px;
+}
+
+.paginator {
+    font-weight: bold;
+    display: flex;
+    font-size: small;
+    justify-content: center;
+    margin: 2rem;
+    text-transform: uppercase;
+    color: #474646;
+}
+
+.chevron {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.chevron.disabled {
+    color: #b0aeae;
+    cursor: not-allowed;
 }
