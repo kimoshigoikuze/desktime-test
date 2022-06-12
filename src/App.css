@@ -103,7 +103,7 @@ button {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.user-list.grid-18 {
+.user-list.grid-20 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
