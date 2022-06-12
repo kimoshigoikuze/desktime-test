@@ -108,12 +108,12 @@ button {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.user-list.grid-24 {
+.user-list.grid-25 {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
 
-.user-list.grid-24 .user-card span {
+.user-list.grid-25 .user-card span {
     font-size: 75%;
 }
 
