@@ -6,7 +6,7 @@ function Header(props) {
     return (
         <div className='header'>
             <div className='logo'>
-               <img src={icon}/>
+               <img alt={'icon'} src={icon}/>
             </div>
             <div className='name'>
                 <h2> {props?.activeUser?.name || "Hi!"} </h2>
@@ -18,7 +18,6 @@ function Header(props) {
                 <button className="switch-dark" onClick={props?.setTheme.bind(this, 'dark')}>
                     &#9789;
                 </button>
-
                 <select onChange={handleChange}   defaultValue="12">
                     <option value="6">6</option>
                     <option value="12">12</option>

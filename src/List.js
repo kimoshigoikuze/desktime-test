@@ -7,8 +7,12 @@ function List(props) {
                         <div
                             className="user-card"
                             key={user.id}
-                            onClick={props.setActiveUser.bind(this, user)}>
-                            <img src={user.url}/>
+                            onClick={props.setActiveUser.bind(this, user)}
+                        >
+                            <img
+                                alt={user.name}
+                                src={user.url}
+                            />
                             <span>{user.name.split(' ').shift()}</span>
                         </div>
                     )

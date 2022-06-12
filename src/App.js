@@ -71,7 +71,6 @@ function App() {
             <Header
                 activeUser={activeUser}
                 setTheme={setTheme}
-                limit={12}
                 changeLimit={changeLimit}
             />
             <div className="error"> {error && error} </div>
@@ -90,9 +89,8 @@ function App() {
             </div>
             <Paginator
                 page={page}
-                limit={limit}
                 changePage={changePage}
-                total={total}
+                total={Math.ceil(total / limit)}
             />
         </div>
     );
